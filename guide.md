@@ -89,5 +89,6 @@ uv run python .\run_eval.py --tasks 2 --judge-model deepseek-chat
 ```
 
 <img width="606" height="71" alt="image" src="https://github.com/user-attachments/assets/e48b50d8-8371-4ad9-abcc-9a8751992dc9" />
-执行结果跑了23个验证对象，通过了17个
+
+执行结果跑了23个验证对象，通过了17个。后面报api余额不足了。
 
