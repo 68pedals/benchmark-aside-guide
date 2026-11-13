@@ -88,7 +88,7 @@ login之后用aside account list查看是否登录的当前账号，不是的话
 确保当前终端位于 `benchmark` 目录下，执行以下命令启动测试：(--tasks 2 测试用例个数)
 
 ```powershell
-uv run python .\run_eval.py --tasks 2 --judge-model deepseek-chat
+uv run python run_eval.py --judge-model DeepSeek-V4.1-Flash --tasks 2
 ```
 
 <img width="606" height="71" alt="image" src="https://github.com/user-attachments/assets/e48b50d8-8371-4ad9-abcc-9a8751992dc9" />
