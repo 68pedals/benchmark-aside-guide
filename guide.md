@@ -95,3 +95,14 @@ uv run python run_eval.py --judge-model DeepSeek-V4.1-Flash --tasks 2
 
 要跑40个对象，通过了17个后报api余额不足了。
 
+后续有发现，--judge-model需要设置一个格式化输出的模型，deepseek支持不好，可以改成gpt-4o，deepseek对它兼容，不需要换api-key
+```powershell
+uv run python run_eval.py --judge-model gpt-4o --tasks 2
+```
+<img width="761" height="412" alt="image" src="https://github.com/user-attachments/assets/c9104097-054e-49ab-ac50-b50b4507c765" />
+
+<img width="730" height="155" alt="image" src="https://github.com/user-attachments/assets/61e9d869-7411-4fbb-a3ce-e01bc0c95d49" />
+
+
+
+
