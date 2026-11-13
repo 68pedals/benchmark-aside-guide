@@ -82,7 +82,7 @@ aside login
 将自定义修改后的 `run_eval.py` 文件覆盖替换到 `benchmark` 根目录下。
 
 ### 9. 执行评测命令
-确保当前终端位于 `benchmark` 目录下，执行以下命令启动测试：
+确保当前终端位于 `benchmark` 目录下，执行以下命令启动测试：(--tasks 2 测试用例个数)
 
 ```powershell
 uv run python .\run_eval.py --tasks 2 --judge-model deepseek-chat
