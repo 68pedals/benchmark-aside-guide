@@ -63,6 +63,7 @@ aside login
 
 <img width="886" height="132" alt="终端登录获取 Key" src="https://github.com/user-attachments/assets/2117f486-904f-431c-a858-a32963c0e5e0" />
 
+login之后用aside account list查看是否登录的当前账号，不是的话用aside account use <id>切换
 ### 6. 浏览器端确认设备
 回到 Aside Browser，进入 `Settings` -> `Account` -> `Devices`，找到对应设备点击 **Confirm**，输入第 5 步终端中显示的 Key 完成绑定：
 
