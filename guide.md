@@ -1,3 +1,5 @@
+已安装的benchmark在PC桌面wangbin文件内
+
 # Browser-Use Benchmark 环境搭建与运行指南
 
 本文档介绍如何在 Windows 环境下配置 `uv`、部署 `browser-use/benchmark` 项目，并结合 **Aside Browser** 与 **DeepSeek** 模型运行评测任务。
