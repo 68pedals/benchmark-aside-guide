@@ -88,21 +88,22 @@ login之后用aside account list查看是否登录的当前账号，不是的话
 确保当前终端位于 `benchmark` 目录下，执行以下命令启动测试：(--tasks 2 测试用例个数)
 
 ```powershell
-uv run python run_eval.py --judge-model DeepSeek-V4.1-Flash --tasks 2
+uv run python run_eval.py --benchmark BU_Bench_V1 --tasks 2 --task-timeout <timeout>
 ```
+<img width="692" height="36" alt="image" src="https://github.com/user-attachments/assets/f1d427ba-6ce4-4418-8d97-f82e47050a63" />
 
-<img width="606" height="71" alt="image" src="https://github.com/user-attachments/assets/e48b50d8-8371-4ad9-abcc-9a8751992dc9" />
+V1需要配置GOOGLE_API_KEY作为judge model
+尝试加 --judge-model deepseek-v4-pro  ,仍然同意的错误。
+所以需要在.env里设置GOOGLE_API_KEY
 
-要跑40个对象，通过了17个后报api余额不足了。
+另外如果跑V2的task，不需要加--benchmark BU_Bench_V1， 但是不支持deepseek作为judge model，
+<img width="1090" height="123" alt="image" src="https://github.com/user-attachments/assets/a260af05-e1d8-4a8e-9c16-e5db7faee5f2" />
+设置 --judge-model gpt-4o 也不可行。
+<img width="1089" height="58" alt="image" src="https://github.com/user-attachments/assets/7f19635e-378d-4947-ada4-0c3335b17c8b" />
 
-后续有发现，--judge-model需要设置一个格式化输出的模型，deepseek支持不好，可以改成gpt-4o，deepseek对它兼容，不需要换api-key
-```powershell
-uv run python run_eval.py --judge-model gpt-4o --tasks 2
-```
-<img width="761" height="412" alt="image" src="https://github.com/user-attachments/assets/c9104097-054e-49ab-ac50-b50b4507c765" />
-
-<img width="730" height="155" alt="image" src="https://github.com/user-attachments/assets/61e9d869-7411-4fbb-a3ce-e01bc0c95d49" />
-
+还有发现模型能力问题，deepseek模型的task会失败在walmart的人机识别地方一直卡住。
+使用aside免费gpt模型在aside是有结果的
+<img width="265" height="813" alt="image" src="https://github.com/user-attachments/assets/436986f8-7aa1-4875-918a-16519d3a9618" />
 
 
 
